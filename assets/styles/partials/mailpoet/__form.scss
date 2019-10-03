@@ -1,0 +1,61 @@
+.mailpoet_form  {
+
+	h2 {
+		text-align: center;
+		font-size: 27px;
+
+		@include media-breakpoint-down(md) {
+			font-size: 1.3rem;
+		}
+	}
+	.mailpoet_paragraph {
+		display: inline-block;
+	}
+	.mailpoet_text {
+		width: 400px !important;
+		height: 30px;
+	}
+	.mailpoet_submit {
+		height: 30px;
+		width: 100px;
+	}
+	p {
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.mailpoet_submit {
+		border: none !important;
+		background-color: $orange !important;
+		padding: 5px 10px !important;
+		text-align: center !important;
+		color: white !important;
+		
+		&:hover {
+			background-color: darken($orange, 10%) !important;
+		}
+		&:active {
+			background-color: darken($orange, 20%) !important;
+		}
+	}
+}
+
+.mailpoet_form {
+	input.mailpoet_text[type="email"] {
+
+		padding-left: 10px;
+		padding-right: 10px;
+
+		@include media-breakpoint-down(lg) {
+			width: 340px !important;
+
+			@include media-breakpoint-down(sm) {
+				width: 400px !important;
+
+				@include media-breakpoint-down(xs) {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}

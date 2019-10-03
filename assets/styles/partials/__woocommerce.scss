@@ -1,0 +1,365 @@
+@import './woocommerce/_product_page';
+@import './woocommerce/_products_loop';
+@import './woocommerce/_mini-cart';
+@import './woocommerce/_related_products';
+
+@import './woocommerce/__wc_breadcrumbs';
+@import './woocommerce/__wc_comments';
+
+@import './woocommerce/__wishlist';
+
+@import './woocommerce/__cart';
+@import './woocommerce/__checkout';
+@import './woocommerce/__thankyou';
+
+
+.widget_price_filter {
+	.ui-slider {
+		.ui-slider-range, .ui-slider-handle {
+			background: $orange-dark;
+		}
+		.ui-slider-handle {
+			border-radius: 5px;
+		}
+	}
+}
+
+.woocommerce-widget-layered-nav-list {
+
+	.woocommerce-widget-layered-nav-list__item {
+		line-height: 1;
+		margin-bottom: 5px;
+
+		&.chosen {
+			&:before, &:after {
+				font-family: dashicons;
+				display: inline-block;
+				line-height: 1;
+				font-weight: 400;
+				font-style: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				vertical-align: top;
+				text-align: center;
+				transition: color .1s ease-in;
+				margin-left: -20px;
+
+			}
+
+			&:before {
+				content: "\f147";
+			}
+		}
+	}
+}
+
+.widget_layered_nav_filters {
+	.chosen {
+		line-height: 1;
+		margin-bottom: 5px;
+		
+		a {
+			background-color: $orange-light;
+			border-radius: 5px;
+			color: white;
+			width: auto;
+			padding: 5px 10px;
+			display: inline-flex;
+			align-items: center;
+			line-height: 1;
+
+			// padding-left: 20px;
+			// background-color: $gray-light;
+	
+			&:before, &:after {
+				font-family: dashicons;
+				display: block;
+				line-height: 1;
+				font-weight: 400;
+				font-style: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				vertical-align: top;
+				text-align: center;
+				transition: color .1s ease-in;
+				// margin-left: -20px;
+			}
+	
+			&:before {
+				content: "\f335";
+				position: relative;
+				top: .5px;
+			}
+
+			&:hover {
+				text-decoration: none;
+
+				&:before {
+					color: black;
+				}
+			}
+
+		}
+	}
+}
+
+.woocommerce.widget {
+	
+	&.widget_layered_nav, 
+	&.widget_rating_filter, 
+	&.widget_price_filter {
+		border-bottom: 1px solid $gray-dark;
+		padding-bottom: 0;
+		margin-bottom: 0;
+
+		.widgettitle {
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 15px 10px;
+			padding-right: 20px;
+			font-size: 14px;
+			position: relative;
+			display: inline-flex;
+			width: 100%;
+			align-items: center;
+
+			cursor: pointer;
+
+			@include media-breakpoint-down(md) {
+				font-size: 12px;
+			}
+
+			&:before, &:after {
+				font-family: dashicons;
+				display: inline-block;
+				line-height: 1;
+				font-weight: 400;
+				font-style: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				vertical-align: top;
+				text-align: center;
+				transition: color .1s ease-in;
+			}
+	
+			&::before {
+				content: "\f536";
+			}
+			&::after {
+				margin-left: 10px;
+				content: "\f140";
+				position: absolute;
+				right: 10px;
+			}
+		}
+		
+		.woocommerce-widget-layered-nav-list, 
+		.woocommerce-widget-layered-nav-dropdown, 
+		.wc-layered-nav-rating,
+		.price_slider_wrapper {
+			display: none;
+		}
+
+		&.show {
+			padding-bottom: 20px;
+			margin-bottom: 15px;
+
+			.widgettitle {
+				margin-bottom: 20px;
+				background-color: $gray;
+				cursor: pointer;
+
+				&:after {
+					content: "\f139";
+				}
+
+				
+				&:before {
+					color: black;
+				}
+			}
+			
+			.woocommerce-widget-layered-nav-list, 
+			.woocommerce-widget-layered-nav-dropdown, 
+			.wc-layered-nav-rating,
+			.price_slider_wrapper {
+				display: block;
+			}
+
+		}
+
+	}
+
+	&.widget_rating_filter {
+		.wc-layered-nav-rating {
+			a {
+				display: flex;
+				align-items: center;
+			}
+			.star-rating {
+				display: inline-block;
+				margin-right: 5px;
+			}
+		}
+	}
+	
+}
+
+
+.woocommerce .col2-set .col-1, 
+.woocommerce .col2-set .col-2 { 
+	max-width: none;
+	padding: 0;
+}
+
+#billing_company_field.form-row-wide {
+	display: inline-block;
+}
+
+#order_comments_field {
+	flex-direction: column;
+	align-items: flex-start;
+
+	.woocommerce-input-wrapper {
+		width: 100%;
+	}
+}
+
+#billing_address_2_field {
+	.screen-reader-text {
+		clip-path: none;
+	}
+}
+
+.woocommerce-cart-form__contents {
+	margin-bottom: 20px;
+
+	thead {
+		border-bottom: 1px solid #000;
+	}
+
+	// .product-quantity {
+	// 	.quantity {
+	// 		display: flex;
+	// 		flex-direction: column;
+	// 	}
+	// }
+}
+
+.woocommerce-cart-form__cart-item.cart_item {
+	border-bottom: 1px solid #000;
+
+	.product-thumbnail {
+		width: 150px;
+
+		.wp-post-image {
+			width: 150px;
+		}
+	}
+
+	.product-name {
+		.variation {
+			display: flex;
+
+			dt,dd {
+				margin-right: 5px;
+			}
+		}
+	}
+
+}
+
+
+
+.woocommerce-notices-wrapper {
+	margin-bottom: 20px;
+	color: white;
+
+	.woocommerce-message, .woocommerce-error {
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+	.woocommerce-message {
+		background-color: $orange-dark;
+	}
+}
+
+.quantity {
+	display: flex;
+
+	.more {
+		order: 3;
+		margin-left: 5px;
+		// width: 20px;
+	}
+	.less {
+		// width: 20px;
+		order: 1;
+		margin-right: 5px;
+	}
+	.input-text.qty.text {
+		order: 2;
+		// width: 50px;
+	}
+}
+
+
+input.input-text {
+	width: inherit;
+
+	padding: 10px 28px;
+	background-color: $gray-dark;
+	color: white;
+	font-weight: bold;
+	border: none;
+}
+
+.track_order {
+	label {
+		display: none;
+	}
+	input.input-text {
+		max-width: 620px;
+		width: 100%;
+
+		margin-bottom: 15px;
+		
+		&::placeholder {
+			color: white;
+		}
+		
+		&:focus, &:active {
+			color: white;
+
+			&::placeholder {
+				color: white;
+			}
+		}
+	}
+
+	button[name="track"] {
+		padding: 14px 50px;
+		font-size: 15px;
+	}
+}

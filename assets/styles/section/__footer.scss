@@ -1,0 +1,12 @@
+footer {
+
+	&.site-footer {
+		background-color: #f7f7f7;
+	}
+
+	.text_copyright {
+		@include media-breakpoint-down(sm) {
+			font-size: .8rem;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@import './_404';
+@import './_maintenance';
+
+.content-area {
+	padding: 30px 0;
+
+	@include media-breakpoint-down(sm) {
+		padding-top: 0;
+	}
+
+	.entry-content {
+
+		// a {
+		// 	color: black;
+		// 	text-decoration: underline;
+
+		// 	&:hover {
+		// 		color: $orange;
+		// 	}
+		// }
+		
+	}
+	
+
+}

@@ -1,0 +1,23 @@
+body {
+	&.page {
+		margin: 0;
+	}
+
+	a.post-edit-link {
+		display: inline-block;
+		background-color: $purple;
+		border-radius: 5px;
+		padding: 5px 10px;
+		color: white;
+
+		&:hover {
+			background-color: darken($purple, 5%);
+		}
+		&:active {
+			background-color: darken($purple, 10%);
+		}
+
+	}
+}
+
+

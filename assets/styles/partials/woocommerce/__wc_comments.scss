@@ -1,0 +1,16 @@
+.woocommerce-Reviews {
+
+	.woocommerce-noreviews {
+		background-color: $orange-dark;
+		color: white;
+		padding: 5px 15px;
+		border-radius: 5px;
+	}
+	.woocommerce-verification-required {
+		background-color: $orange;
+		color: white;
+		padding: 5px 15px;
+		border-radius: 5px;
+		display: inline-block;
+	}
+}

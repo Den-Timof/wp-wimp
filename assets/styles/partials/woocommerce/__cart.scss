@@ -1,0 +1,111 @@
+.woocommerce-cart-form {
+	width: 65%;
+	float: left;
+
+	.cart_item {
+
+	}
+
+	.shop_table {
+		tr {
+			border-bottom: 1px solid $gray-dark;
+		}
+		thead tr {
+			height: 40px;
+		}
+	}
+
+	.actions {
+		.coupon {
+			margin-bottom: 20px;
+			margin-top: 20px;
+
+			display: inline-block;
+
+			button[name="apply_coupon"] {
+				margin-left: 10px;
+			}
+		}
+		button[name="update_cart"] {
+			float: right;
+			margin-top: 20px;
+		}
+	}
+}
+
+.cart-collaterals {
+	width: 27%;
+	float: right;
+
+	.cart_totals {
+
+		h2 {
+			margin-bottom: 20px;
+		}
+
+		.shop_table {
+
+			tbody > tr > td {
+				padding: 10px 5px !important;
+
+			}
+			
+			.cart-subtotal {
+				padding-bottom: 40px;
+				border-bottom: 1px solid $gray-dark;
+				// height: 40px;
+				td {
+					padding: 15px 0;
+				}
+			}
+			
+			.woocommerce-shipping-totals.shipping {
+				border-bottom: 1px solid $gray-dark;
+
+				// td[data-title="Доставка"] {
+				// 	padding-left: 10px;
+				// }
+
+				.woocommerce-shipping-methods {
+					.shipping_method {
+						& + label {
+							margin-left: 5px;
+						}
+					}
+				}
+				
+				td {
+					padding: 15px 0;
+				}
+
+				.woocommerce-shipping-destination {
+					
+				}
+			}
+			
+			.order-total {
+				border-bottom: 1px solid $gray-dark;
+				td {
+					padding: 20px 0;
+				}
+			}
+		}
+
+		.wc-proceed-to-checkout {
+			margin-top: 40px;
+
+			.checkout-button {
+				display: block;
+				padding: 10px;
+			}
+		}
+	}
+
+}
+
+
+.widget.widget_polylang {
+	margin: 0;
+	list-style: none;
+}
+

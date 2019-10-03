@@ -1,0 +1,32 @@
+.error404 {
+
+	.error-404.not-found {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 600px;
+	}
+
+
+	.image-404-page {
+		display: block;
+		margin: 0 auto;
+		width: 500px;
+	}
+
+	.page-content {
+		text-align: center;
+
+
+		.link-404 {
+			font-weight: bold;
+			text-decoration: underline;
+
+			color: black;
+
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}

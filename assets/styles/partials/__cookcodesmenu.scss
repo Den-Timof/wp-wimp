@@ -1,0 +1,343 @@
+.cookcodesmenu_menu {
+	
+	background: $orange;
+	
+	.cookcodesmenu_btn {
+		position: relative;
+		top: 5px;
+	}
+
+	.login-block {
+		float: left;
+		margin-top: 13px;
+		margin-left: 15px;
+
+		@include media-breakpoint-down(xs) {
+			margin-left: 5px;
+		}
+
+		a {
+			color: white;
+			
+			.dashicons {
+				font-size: 28px;
+				width: 28px;
+				height: 28px;
+			}
+		}
+
+		// .admin-offline {
+		// 	display: flex;
+		// 	align-items: center;
+		// }
+
+		.admin-online {
+			position: relative;
+			
+			&::after {
+				content: "\f147";
+				font-family: dashicons;
+
+				position: absolute;
+				top: -15px;
+				left: 10px;
+				color: #00ff00;
+								
+				display: inline-block;
+				line-height: 1;
+				font-weight: 400;
+				font-style: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				width: 28px;
+				height: 28px;
+				font-size: 28px;
+				vertical-align: top;
+				text-align: center;
+				transition: color .1s ease-in;
+			}
+		}
+	}
+
+	.wishlist_products_counter {
+
+		float: left;
+		margin-top: 8px;
+		margin-left: 20px;
+
+		@include media-breakpoint-down(xs) {
+			margin-left: 20px;
+		}
+
+		&::before {
+			color: white;
+		}
+
+		.wishlist_products_counter_text {
+			display: none;
+		}
+		.wishlist_products_counter_number {
+			border: 2px solid white;
+		}
+	}
+
+	.site-header-cart {
+		width: auto;
+		float: left;
+		margin-top: 8px;
+		margin-left: 15px;
+
+		@include media-breakpoint-down(xs) {
+			margin-left: 7px;
+		}
+
+		.cart-contents {
+			.dashicons {
+				color: white;
+
+				.count {
+					border: 2px solid white;
+					// display: block;
+					font-family: Arial, sans-serif;
+				}
+			}
+
+			.cart-text {
+				display: none;
+			}
+		}
+
+	}
+
+	.cookcodesmenu_brand {
+		background-color: white;
+		margin: 5px;
+		border-radius: 5px;
+
+		img {
+			max-height: 100%;
+
+		}
+	}
+
+	.cookcodesmenu_nav {
+
+		.cookcodesmenu_arrow {
+			position: relative;
+			top: 10px;
+			display: flex;
+		}
+
+		.children {
+			margin-left: 0;
+
+			a[role='menuitem'] {
+				padding: 0 15px;
+			}
+		}
+
+		.cat-item {
+			.children {
+				background: darken($orange, 20%);
+				
+				.children {
+					background: darken($orange, 25%);
+					
+					.children {
+						background: darken($orange, 30%);
+						
+						.children {
+							background: darken($orange, 35%);
+						}
+					}
+				}
+			}
+		}
+
+		& > .cat-item {
+			border-top: 1px solid white;
+
+			background: darken($orange, 10%);
+		}
+
+		.widget_layered_nav,
+		.widget_rating_filter,
+		.widget_price_filter  {
+			line-height: 40px;
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+
+			.widgettitle {
+				padding: 0 15px !important;
+				line-height: inherit;
+
+				&::before {
+					display: none;
+				}
+
+				&::after {
+					font-family: dashicons;
+					line-height: 1;
+					font-weight: 400;
+					font-style: normal;
+					text-transform: none;
+					text-rendering: auto;
+					font-size: 20px;
+					text-align: center;
+
+					right: 15px;
+
+					content: "\f347";
+				}
+			}
+
+			&.show {
+				border: none;
+				padding-bottom: 0;
+				margin-bottom: 0;
+				background-color: darken($orange, 20%);
+
+				.widgettitle {
+					background-color: darken($orange, 10%);
+					margin-bottom: 0;
+					
+					&::after {
+						content: "\f343";
+					}
+				}
+
+				ul {
+					margin: 0;
+				}
+				
+				.woocommerce-widget-layered-nav-dropdown {
+					padding: 5px 15px 10px;
+				}
+				
+				.woocommerce-widget-layered-nav-dropdown,
+				.woocommerce-widget-layered-nav-list {
+					margin-left: 0;
+				}
+
+				.woocommerce-widget-layered-nav-list__item {
+					padding: 0 15px;
+					height: 40px;
+					margin: 0;
+
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					&::before {
+						position: relative;
+						left: 15px;
+					}
+
+					&::after {
+						content: '';
+						width: 15px;
+						height: 15px;
+						display: block;
+						border: 1.5px solid white;
+						left: 15px;
+						position: absolute;
+						border-radius: 3px;
+					}
+					
+					a {
+						position: relative;
+						left: 15px;
+						padding: 0;
+						display: inline-block;
+						margin-left: 10px;
+					}
+
+					.count {
+						position: relative;
+						left: 15px;
+						margin-left: 5px;
+					}
+
+					&.chosen {
+						&::after {
+							left: 36px;
+						}
+						&::before {
+							left: 18px;
+						}
+					}
+				}
+
+				.wc-layered-nav-rating {
+					padding: 0 15px;
+
+					a {
+						padding: 0;
+					}
+
+					span {
+						&::before {
+							color: white;
+						}
+					}
+				}
+
+				.price_slider_wrapper {
+					
+					padding: 30px 15px 0;
+					
+
+					.price_slider {
+						.ui-slider-range,
+						.ui-slider-handle {
+							background: white;
+						}
+					}
+					.price_slider_amount {
+						display: flex;
+						justify-content: flex-start;
+						flex-wrap: wrap;
+
+						.button {
+							margin-right: 15px;
+							margin-bottom: 10px;
+						}
+
+						.price_label {
+							display: inline-block;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.widget_product_search {
+			padding: 10px 15px;
+			margin: 0;
+
+			// border-top: 1px solid white;
+
+			.woocommerce-product-search {
+				display: flex;
+				align-items: center;
+				// justify-content: space-between;
+			}
+
+			.search-field, button {
+				height: 35px;
+			}
+			.search-field {
+				margin-right: 10px;
+				width: 100%;
+			}
+			button {
+				border: 1.5px solid white;
+			}
+		}
+
+	}
+}

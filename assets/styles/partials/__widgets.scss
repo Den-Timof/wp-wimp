@@ -1,0 +1,36 @@
+
+
+.widget {
+	&.woocommerce {
+
+		/*
+		 * WC_Widget_Product_Search
+		 */
+		&.widget_product_search {
+
+			.search-field {
+				padding-left: 10px;
+				padding-right: 10px;
+
+				height: 34px;
+			}
+
+			button {
+				// padding-top: 0;
+				// padding-bottom: 0;
+
+				// display: inline-flex;
+				// justify-content: center;
+				// align-items: center;
+
+				.dashicons {
+					margin-right: 0;
+					line-height: 24px;
+					height: 24px;
+				}
+			}
+
+		}
+
+	}
+}

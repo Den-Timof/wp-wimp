@@ -1,0 +1,266 @@
+aside {
+	margin-bottom: 40px;
+
+
+	.widget {
+		margin-bottom: 20px;
+		list-style: none;
+		
+		.widgettitle {
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 1;
+
+			display: inline-flex;
+	
+			margin: 15px 0;
+			
+			&:before {
+				content: "\f203";
+				color: #e1e0e0;
+				margin-right: 10px;
+				font-family: dashicons;
+				display: inline-block;
+				line-height: 1;
+				font-weight: 400;
+				font-style: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				vertical-align: top;
+				text-align: center;
+				transition: color .1s ease-in;
+			}
+		}
+
+	}
+
+	/**
+	 * Виджет. Категории товаров
+	 */
+	#woocommerce_product_categories-2 {
+		list-style: none;
+		margin: 0;
+		margin-bottom: 40px;
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+
+		& > ul.product-categories {
+			margin: 0;
+
+			a {
+				color: black;
+				
+				&:hover {
+					color: $orange;
+					text-decoration: none;
+				}
+				&:active {
+					color: darken($orange,10%);
+					border-bottom-color: darken($orange,10%) !important;
+				}
+			}
+
+			& > li {
+			
+				&.cat-parent, &.cat-item {
+					background-color: $gray;
+					font-size: 14px;
+					line-height: 1.5;
+					padding: 10px 10px;
+					position: relative;
+					margin-bottom: 10px;
+
+					&:before, &:after {
+						font-family: dashicons;
+						display: inline-block;
+						line-height: 1;
+						font-weight: 400;
+						font-style: normal;
+						speak: none;
+						text-decoration: inherit;
+						text-transform: none;
+						text-rendering: auto;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						width: 20px;
+						height: 20px;
+						font-size: 20px;
+						vertical-align: top;
+						text-align: center;
+						transition: color .1s ease-in;
+					}
+
+					&:before {
+						content: "\f513";
+						margin-right: 10px;
+					}
+					&:after {
+						margin-left: 10px;
+						float: right;
+						content: "\f140";
+					}
+
+					ul.children {
+						display: none;
+						
+						margin: 0;
+						padding: 10px;
+						// min-width: 200px;
+						z-index: 10;
+						background-color: $gray-light;
+
+						.cat-item:not(:last-child), .cat-parent:not(:last-child) {
+							padding-left: 5px;
+							padding-right: 20px;
+						}
+
+						.cat-item, .cat-parent {
+
+							a {
+								display: inline-block;
+								width: 100%;
+							}
+						}
+
+						.cat-parent {
+
+							& > a {
+								border-bottom: 2px solid $orange;
+								font-weight: bold;
+							}
+
+						}
+					}
+
+					& > ul.children {
+						position: absolute;
+						top: 0;
+						left: 100%;
+
+						@include media-breakpoint-only(md) {
+							position: relative;
+							left: 0;
+							margin-bottom: -10px;
+							margin-left: -10px;
+							margin-right: -10px;
+							margin-top: 10px;
+						}
+
+
+						& > li.cat-item {
+							min-width: 250px;
+						}
+
+						li.cat-item {
+							padding: 0;
+
+							ul.children {
+								padding: 10px 0;
+							}
+						}
+
+					}
+					
+					@include media-breakpoint-up(lg) {
+						&:hover {
+							&:after {
+								content: "\f139";
+							}
+							ul.children {
+								display: flex;
+							}
+						}
+					}
+	
+
+						
+					&.show {
+						&:after {
+							content: "\f139";
+							position: absolute;
+							top: 10px;
+							right: 10px;
+						}
+
+						a {
+							-webkit-touch-callout: none; /* iOS Safari */
+							-webkit-user-select: none; /* Safari */
+							 -khtml-user-select: none; /* Konqueror HTML */
+								 -moz-user-select: none; /* Old versions of Firefox */
+									-ms-user-select: none; /* Internet Explorer/Edge */
+											user-select: none; /* Non-prefixed version, currently
+																						supported by Chrome, Opera and Firefox */
+						}
+
+						ul.children {
+							display: flex;
+							flex-direction: column;
+
+							li.cat-item {
+								width: 100%;
+								min-width: 150px;
+								padding-left: 0;
+
+							}
+							& > li.cat-item:not(:last-child) {
+								margin-bottom: 10px;
+							}
+						}
+					}
+
+				}
+
+				&.cat-item:not(.cat-parent) {
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+		}
+	}
+
+	/**
+	 * Виджет. Активные фильтры
+	 */
+	#woocommerce_layered_nav_filters-2 {
+		margin-bottom: 40px;
+	}
+
+	/**
+	 * Виджет. Фильтр товаров по атрибутам
+	 */
+	.widget_layered_nav {
+
+	}
+
+	/**
+	 * Виджет. Фильтр цены товаров
+	 */
+	.widget_price_filter {
+		.price_slider_amount {
+			@include media-breakpoint-only(md) {
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: flex-start;
+			}
+
+			.button {
+				@include media-breakpoint-only(md) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+}
+
